@@ -1,0 +1,14 @@
+version: '3'
+services:
+  chatty:
+    image: llm-converstaion
+    container_name: chatty
+    volumes:
+      - ollama:/root/.ollama
+    environment:
+      - TOPIC=what if cats could write poetry
+    tty: true
+    stdin_open: true
+
+volumes:
+  ollama
